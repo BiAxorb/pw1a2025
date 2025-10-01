@@ -1,0 +1,13 @@
+.card{
+    border: 5px solid #cccccc;
+    width: 250px;
+    height: 370px;
+}
+.card-star{
+    text-align: right;
+}
+.card-buttom-buy{
+    text-align: center;
+  color: orange;
+ border: orange;
+}
