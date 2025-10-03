@@ -2,6 +2,10 @@
     border: 5px solid #cccccc;
     width: 250px;
     height: 370px;
+    margin-bottom: 2%;
+}
+.card-image{
+    margin-left: 20px;
 }
 .card-star{
     text-align: right;
@@ -11,3 +15,24 @@
   color: orange;
  border: orange;
 }
+.card-desconto{
+    text-decoration: line-through;
+}
+    .btn{
+        color: #ffff;
+        background-color: darkorange;
+        size: 20px;
+        width: 152px;
+        height: 40px;
+margin-right: 10px;
+    }
+    .card-price{
+        display: flex;
+        color:  darkorange;
+    }
+    .L{
+        margin-left: 25px;
+    }
+    .card-description{
+        font-weight:bold;
+    }
