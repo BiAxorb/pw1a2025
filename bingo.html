@@ -82,12 +82,41 @@
     </thead>
 </table>
 <script>
-    var B = []
-    var I = []
-    var N = []
-    var G = []
-    var O = []
-    var sorteio = []
+function Poi(numero) {
+    if(numero%2==0) {
+        return "Par"
+    } else{return "Impar"}
+}
+
+    var B = lista(1,15)
+    var I = lista(16,30)
+    var N = lista(31,45)
+    var G = lista(46,60)
+    var O = lista(61,75)
+    var sorteio = lista(1,75)
+
+
+    function lista(inicial, final)
+    {
+        var retorno = []
+        for(var i = inicial; i <= final; i++)
+{
+    retorno.push(i)
+    
+}   return retorno 
+    }    
+    function SL(retorno)
+    {
+ document.write (retorno)
+    }
+
+    SL(B)
+    SL(I)
+    SL(N)
+    SL(G)
+    SL(O)
+    SL(sorteio)
+    /*
     for(var i = 1; i <= 75; i++)
 {sorteio.push(i)}
     for(var i = 1; i <= 15; i++)
@@ -98,8 +127,7 @@ for(var i = 16; i <= 30; i++)
 {
     I.push(i)
 }    
-for(var i = 31; i <= 45; i++)
-if(i%2==0)
+
 
 {
     N.push(i)
@@ -115,6 +143,7 @@ for(var i = 61; i <= 75; i++)
 {
     O.push(i)
 }
+*/
 </script>
 </body>
 </html>
