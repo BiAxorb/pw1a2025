@@ -44,57 +44,73 @@
         <th>O</th>
         <tbody>
             <tr>
-                <td>11</td>
-                <td>24</td>
-                <td>40</td>
-                <td>60</td>
-                <td>62</td>
+                <td onclick="marcar(this)" >11</td>
+                <td onclick="marcar(this)">24</td>
+                <td onclick="marcar(this)">40</td>
+                <td onclick="marcar(this)">60</td>
+                <td onclick="marcar(this)">62</td>
             </tr>
             <tr>
-                <td>9</td>
-                <td>26</td>
-                <td>41</td>
-                <td>47</td>
-                <td>63</td>
+                <td onclick="marcar(this)">9</td>
+                <td onclick="marcar(this)">26</td>
+                <td onclick="marcar(this)">41</td>
+                <td onclick="marcar(this)">47</td>
+                <td onclick="marcar(this)">63</td>
             </tr>
             <tr>
-                <td>1</td>
-                <td>30</td>
-                <td><img src="https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png" width="70" height="70" ></td>
-                <td>50</td>
-                <td>61</td>
+                <td onclick="marcar(this)">1</td>
+                <td onclick="marcar(this)">30</td>
+                <td onclick="marcar(this)"><img src="https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png" width="70" height="70" ></td>
+                <td onclick="marcar(this)">50</td>
+                <td onclick="marcar(this)">61</td>
             </tr>
             <tr>
-                <td>15</td>
-                <td>26</td>
-                <td>44</td>
-                <td>56</td>
-                <td>69</td>
+                <td onclick="marcar(this)">15</td>
+                <td onclick="marcar(this)">26</td>
+                <td onclick="marcar(this)">44</td>
+                <td onclick="marcar(this)">56</td>
+                <td onclick="marcar(this)">69</td>
             </tr>
             <tr>
-                <td>7</td>
-                <td>28</td>
-                <td>46</td>
-                <td>59</td>
-                <td>75</td>
+                <td onclick="marcar(this)">7</td>
+                <td onclick="marcar(this)">28</td>
+                <td onclick="marcar(this)">46</td>
+                <td onclick="marcar(this)">59</td>
+                <td onclick="marcar(this)">75</td>
             </tr>
         </tbody>
     </thead>
 </table>
 <script>
+
 function Poi(numero) {
     if(numero%2==0) {
         return "Par"
     } else{return "Impar"}
 }
 
-    var B = lista(1,15)
-    var I = lista(16,30)
-    var N = lista(31,45)
-    var G = lista(46,60)
-    var O = lista(61,75)
+    var B = NumeroAleatorio(1,15)
+    var I = NumeroAleatorio(16,30)
+    var N = NumeroAleatorio(31,45)
+    var G = NumeroAleatorio(46,60)
+    var O = NumeroAleatorio(61,75)
     var sorteio = lista(1,75)
+function marcar(elementoclicado)
+{
 
+    NumeroAleatorio()
+    elementoclicado.innerText = NumeroAleatorio()
+}
+function NumeroAleatorio(min, max)
+{
+    var numero = Math.random() *max
+    numero = Math.floor(numero)
+    if(numero >=min){
+    return numero}
+    else{
+        return NumeroAleatorio(min, max)
+    }
+}
 
     function lista(inicial, final)
     {
